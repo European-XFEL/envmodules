@@ -1,0 +1,14 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "envmodules"
+author = "European XFEL GmbH"
+author-email = "da-support@xfel.eu"
+home-page = "https://github.com/European-XFEL/envmodules"
+description-file = "README.rst"
+classifiers = [
+    "License :: OSI Approved :: BSD License",
+]
+

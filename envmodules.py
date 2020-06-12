@@ -3,6 +3,8 @@
 import os
 from subprocess import run, PIPE
 
+__version__ = '0.1'
+
 def _modulecmd(*args):
     cmd = ['modulecmd', 'python'] + list(args)
     res = run(cmd, stdout=PIPE, stderr=PIPE)
