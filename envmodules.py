@@ -6,7 +6,7 @@ from subprocess import run, PIPE
 
 __version__ = '0.1'
 
-_cached_pythonpath = os.environ['PYTHONPATH']
+_cached_pythonpath = os.getenv('PYTHONPATH', '')
 _auto_fix_sys_path = 0
 
 def _modulecmd(*args):
@@ -40,7 +40,7 @@ def get_auto_fix_sys_path():
 
 def fix_sys_path():
     global _cached_pythonpath
-    pypath = os.environ['PYTHONPATH']
+    pypath = os.getenv('PYTHONPATH', '')
     if pypath == _cached_pythonpath:
         # Nothing to do if PYTHONPATH has not changed
         return
